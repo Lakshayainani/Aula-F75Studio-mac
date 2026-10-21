@@ -1,0 +1,37 @@
+F75 Studio 0.3.0 — macOS 13 or later
+
+INSTALL
+1. Drag F75 Studio.app onto the Applications shortcut.
+2. Eject the disk image, then open the installed app from Applications.
+3. Connect your supported AULA F75 with a USB cable in wired mode.
+4. Enable F75 Studio in System Settings > Privacy & Security > Input Monitoring.
+   Quit and reopen the app, then click Connect.
+
+FIRST OPEN
+This community build is ad-hoc signed and has not been notarized by Apple.
+macOS may block it. Review the source and publisher before deciding to open it.
+Apple explains the per-app Open Anyway option here:
+https://support.apple.com/102445
+No security settings are changed by this installer.
+
+SUPPORTED KEYBOARD
+USB 258A:010C, configuration usage page 1 / usage 128, feature size 520,
+model identifier 03 00 00 00 00 CD. A matching product name or USB ID alone
+is not sufficient. Bluetooth and 2.4 GHz configuration are not supported.
+
+FIRST STEPS
+Export a keyboard backup before experimenting. The app also saves backups
+before device writes. Macro updates change every key using that record.
+Open Settings to enable the menu bar or launch at login.
+Firmware inspection is available; firmware flashing is disabled.
+
+UPDATES
+Quit the app before replacing it. A new build can require removing and re-adding
+its Input Monitoring entry, then restarting the app. Library and backups live
+in ~/Library/Application Support/F75Studio and are not removed by replacement.
+
+UNINSTALL
+Disable launch at login in the app's Settings and quit the app. Move the app
+to Trash. Saved macros/backups are retained in Application Support.
+
+Independent community software. Not affiliated with or endorsed by AULA.

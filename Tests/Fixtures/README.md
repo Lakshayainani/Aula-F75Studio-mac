@@ -1,0 +1,1 @@
+These fixtures are synthetic protocol examples generated for offline tests. They contain no captured keyboard settings, serial numbers, or personal macros. They represent model CD packet layouts; they are not firmware images or installation defaults.
