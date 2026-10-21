@@ -20,12 +20,31 @@ review the license before publishing.
 
 3. On GitHub, choose **Releases → Draft a new release**. Create tag `v0.3.0`
    targeting `main`; use the title **F75 Studio 0.3.0**.
-4. Paste `RELEASE_NOTES.md`, attach the three archives and `SHA256SUMS.txt`
-   from `release/`, then publish when ready. Source ZIP/TAR downloads generated
-   automatically by GitHub are also available after tagging.
+4. Paste `RELEASE_NOTES.md` and choose **Publish release**. The **Publish macOS
+   downloads** workflow automatically tests, builds the universal app, and attaches
+   the DMG, app ZIP, source ZIP, and `SHA256SUMS.txt` to that same release.
+5. Wait for the workflow to succeed, then share the release page. Users download
+   the `.dmg` directly from **Assets**, open it, and drag the app into Applications.
 
-The included workflow builds/tests packages but does not publish releases.
-Binaries and local build products are ignored by Git; attach them to Releases.
+For future versions, update both version fields in `assets/Info.plist`, update
+release notes, commit/push, and publish a matching `vX.Y.Z` tag. A mismatched tag
+fails before packaging, preventing incorrectly named downloads.
+
+For an existing release, use **Actions → Publish macOS downloads → Run workflow**
+and enter its tag. The selected tag must contain the build/package scripts. The release workflow
+can run from the default branch, so it can also package an older release tag. A manual run does not create or publish a release; create the
+release first. Reruns replace the four generated download/checksum assets.
+
+The workflow uses GitHub's built-in token with `contents: write` for its release
+job. No personal access token or Apple account is needed for ad-hoc-signed builds.
+The separate **Build macOS app** workflow still checks pushes and pull requests
+and keeps workflow artifacts. Binaries remain ignored by Git.
+
+The automatic downloads have the same ad-hoc signing/notarization limitations
+as local packages. This workflow does not install a Developer ID certificate or
+perform notarization. If GitHub immutable releases are enabled, build and upload
+to a draft using the manual workflow before publishing; published immutable
+release assets cannot be replaced.
 
 ## Developer ID signing and notarization
 

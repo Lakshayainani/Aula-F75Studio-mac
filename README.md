@@ -88,9 +88,10 @@ scripts/package-release.sh
 
 This builds the app and creates a DMG, app ZIP, source ZIP, checksums, and release
 notes under `release/`. Existing release files are not silently overwritten.
-The source ZIP includes only Git-tracked/staged files. The GitHub Actions workflow
-runs offline tests and uploads the same package as a workflow artifact; it does
-not automatically publish a GitHub release.
+The source ZIP includes only Git-tracked/staged files. The CI workflow runs offline tests and uploads a workflow artifact. Publishing a
+GitHub Release with a matching `vX.Y.Z` tag also triggers **Publish macOS downloads**,
+which builds and attaches the DMG, app ZIP, source ZIP, and checksums to the release.
+Users download the DMG directly under the release's **Assets** section.
 
 See [publishing instructions](docs/PUBLISHING.md) for GitHub uploads and optional
 Developer ID signing/notarization.
