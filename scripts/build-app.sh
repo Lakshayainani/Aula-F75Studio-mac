@@ -15,10 +15,11 @@ for architecture in "${architectures[@]}"; do
     binaries+=("$stage/F75Studio-$architecture")
 done
 bundle="$stage/F75 Studio.app"
-mkdir -p "$bundle/Contents/MacOS"
+mkdir -p "$bundle/Contents/MacOS" "$bundle/Contents/Resources"
 /usr/bin/lipo -create "${binaries[@]}" -output "$bundle/Contents/MacOS/F75Studio"
 chmod 755 "$bundle/Contents/MacOS/F75Studio"
 cp assets/Info.plist "$bundle/Contents/Info.plist"
+cp assets/AppIcon.icns "$bundle/Contents/Resources/AppIcon.icns"
 /usr/bin/plutil -lint "$bundle/Contents/Info.plist"
 identity="${SIGN_IDENTITY:--}"
 if [[ "$identity" == "-" ]]; then

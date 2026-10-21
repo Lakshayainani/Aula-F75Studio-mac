@@ -1,4 +1,4 @@
-# F75 Studio 0.3.0
+# F75 Studio 0.3.1
 
 Native macOS companion for the supported wired AULA F75 model CD.
 
@@ -10,11 +10,17 @@ Native macOS companion for the supported wired AULA F75 model CD.
 - Menu bar controls and optional launch at login.
 - Firmware file inspection; firmware flashing remains disabled.
 
+## New in 0.3.1
+
+- AULA emblem and white lettering inside a violet keycap app icon.
+- Matching logo in the app sidebar.
+- Icon master artwork and a macOS icon generation script included with the source.
+
 ## Downloads
 
-- `F75Studio-0.3.0.dmg`: drag-to-Applications disk image.
-- `F75Studio-0.3.0-macOS.zip`: the same app as a ZIP.
-- `F75Studio-0.3.0-source.zip`: source, tests, fixtures, and build scripts.
+- `F75Studio-0.3.1.dmg`: drag-to-Applications disk image.
+- `F75Studio-0.3.1-macOS.zip`: the same app as a ZIP.
+- `F75Studio-0.3.1-source.zip`: source, tests, fixtures, and build scripts.
 - `SHA256SUMS.txt`: checksums of the three archives.
 
 The macOS app contains Apple Silicon and Intel slices and targets macOS 13+.

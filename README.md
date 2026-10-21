@@ -67,6 +67,9 @@ The app is created in `dist/F75 Studio.app`. The build script compiles both
 For a host-only build, use `ARCHS=arm64 scripts/build-app.sh` or
 `ARCHS=x86_64 scripts/build-app.sh`.
 
+The app icon is bundled from `assets/AppIcon.icns`. After changing the master
+`assets/AppIcon.png`, run `bash scripts/build-icon.sh` before rebuilding the app.
+
 Tests use **synthetic fixtures**, require no keyboard, and send no device reports.
 The application protocol was reconstructed from static Windows-driver analysis
 and checked against physical configuration reads/writes. Proprietary driver files,

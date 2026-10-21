@@ -411,6 +411,9 @@ private struct StudioView: View {
     private var sidebar: some View {
         VStack(alignment: .leading, spacing: 30) {
             VStack(alignment: .leading, spacing: 6) {
+                Image(nsImage: NSApplication.shared.applicationIconImage)
+                    .resizable().scaledToFit().frame(width: 100, height: 100)
+                    .accessibilityLabel("AULA Mac Studio keycap logo")
                 Text("F75").font(.system(size: 34, weight: .bold, design: .rounded))
                 Text("STUDIO").font(.system(size: 10, weight: .bold)).tracking(4).foregroundStyle(accent)
             }
